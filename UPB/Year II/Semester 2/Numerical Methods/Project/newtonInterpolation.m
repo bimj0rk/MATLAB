@@ -19,12 +19,12 @@ end
 [~, index] = max(abs(divDiff(:, 2)));
 
 % Coefficients of the second-order polynomial
-a0 = T(index);
-a1 = divDiff(index, 2);
-a2 = divDiff(index, 3);
+b0 = T(index);
+b1 = divDiff(index, 2);
+b2 = divDiff(index, 3);
 
 % Evaluate the polynomial at the interpolation point
-P2 = a0 + a1*(zInterpolate - z(index)) + a2*(zInterpolate - z(index))*(zInterpolate - z(index + 1));
+P2 = b0 + b1*(zInterpolate - z(index)) + b2*(zInterpolate - z(index))*(zInterpolate - z(index + 1));
 
 % Display the results
 disp(['Interpolated temperature at z = -7.5 m: ' num2str(P2)]);
