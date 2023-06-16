@@ -18,5 +18,5 @@ tconv11 = 2*(-30):0.001:2*34;
 plot(tconv11, conv11), xlabel('Time'), ylabel('x1*x1'); grid 
 
 conv12 = conv(x1, x2);
-tconv12 = -(30+17):0.001:(34+15);
+tconv12 = (-30-17):0.001:(34+15);
 plot(tconv12, conv12), xlabel('Time'), ylabel('x1*x2'); grid 
